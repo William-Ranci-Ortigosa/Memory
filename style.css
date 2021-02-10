@@ -1,0 +1,139 @@
+* {cursor: url(images/cursor.cur), default;}
+
+body {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: whitesmoke;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 150px;
+}
+
+header {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 2%;
+    height: 20px;
+    width: 200px
+
+}
+
+#refresh {
+    height: 60px;
+    width: 60px
+}
+
+#refresh_popup {
+    height: 60px;
+    width: 60px
+}
+
+#back {
+    height: 60px;
+    width: 60px
+}
+
+img:hover {
+    transition: .15s ease-in-out;
+    transform: scale(1.1);
+    cursor: url(images/cursor.cur), default;
+}
+
+h3 {
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: inline-block;
+}
+
+.popup .overlay {
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100vw;
+    height:100vh;
+    background:rgba(0,0,0,0.7);
+    z-index:1;
+    display:none;
+}
+  
+.popup .content {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0);
+    background: #fff;
+    width: 350px;
+    height: 250px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-family:'Courier New', Courier, monospace;
+}
+    
+.popup.active .overlay {
+    display:block;
+}
+  
+.popup.active .content {
+    transition:all 300ms ease-in-out;
+    transform:translate(-50%,-50%) scale(1);
+}
+  
+.grid {
+    flex-wrap: wrap;
+    height: 345px;
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div img {
+    position: relative;
+    border: 2px solid black;
+    margin: 8px;
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+}
+
+div img:hover {
+    transition: .3s ease-in-out;
+    transform: scale(1.05);
+    filter: brightness(110%);
+    cursor: url(images/cursor.cur), default;
+}
+
+div img:active {
+    transform: scale(.98)
+}
+
+button {
+    border-style: none;
+    width: 200px;
+    border-style: none;
+    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace;
+    border: 2px black solid;
+    border-radius: 15px;
+    background-color: lightgray;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+    font-weight: bold;
+    outline: none;
+}
+
+button:hover {
+    transition: .3s ease-in-out;
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: scale(.98)
+}
